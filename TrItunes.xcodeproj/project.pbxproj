@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F03E88D22FB41A4006A0181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E88C22FB41A4006A0181 /* AppDelegate.m */; };
+		5F03E89022FB41A4006A0181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E88F22FB41A4006A0181 /* ViewController.m */; };
+		5F03E89322FB41A4006A0181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F03E89122FB41A4006A0181 /* Main.storyboard */; };
+		5F03E89522FB41A5006A0181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F03E89422FB41A5006A0181 /* Assets.xcassets */; };
+		5F03E89822FB41A5006A0181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F03E89622FB41A5006A0181 /* LaunchScreen.storyboard */; };
+		5F03E89B22FB41A5006A0181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E89A22FB41A5006A0181 /* main.m */; };
+		5F03E8A522FB41A5006A0181 /* TrItunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E8A422FB41A5006A0181 /* TrItunesTests.m */; };
+		5F03E8B022FB41A5006A0181 /* TrItunesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E8AF22FB41A5006A0181 /* TrItunesUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F03E8A122FB41A5006A0181 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F03E88022FB41A4006A0181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F03E88722FB41A4006A0181;
+			remoteInfo = TrItunes;
+		};
+		5F03E8AC22FB41A5006A0181 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F03E88022FB41A4006A0181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F03E88722FB41A4006A0181;
+			remoteInfo = TrItunes;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F03E88822FB41A4006A0181 /* TrItunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrItunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F03E88B22FB41A4006A0181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F03E88C22FB41A4006A0181 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F03E88E22FB41A4006A0181 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5F03E88F22FB41A4006A0181 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5F03E89222FB41A4006A0181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F03E89422FB41A5006A0181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F03E89722FB41A5006A0181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F03E89922FB41A5006A0181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F03E89A22FB41A5006A0181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F03E8A022FB41A5006A0181 /* TrItunesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrItunesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F03E8A422FB41A5006A0181 /* TrItunesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrItunesTests.m; sourceTree = "<group>"; };
+		5F03E8A622FB41A5006A0181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F03E8AB22FB41A5006A0181 /* TrItunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrItunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F03E8AF22FB41A5006A0181 /* TrItunesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrItunesUITests.m; sourceTree = "<group>"; };
+		5F03E8B122FB41A5006A0181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F03E88522FB41A4006A0181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E89D22FB41A5006A0181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E8A822FB41A5006A0181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F03E87F22FB41A4006A0181 = {
+			isa = PBXGroup;
+			children = (
+				5F03E88A22FB41A4006A0181 /* TrItunes */,
+				5F03E8A322FB41A5006A0181 /* TrItunesTests */,
+				5F03E8AE22FB41A5006A0181 /* TrItunesUITests */,
+				5F03E88922FB41A4006A0181 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F03E88922FB41A4006A0181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F03E88822FB41A4006A0181 /* TrItunes.app */,
+				5F03E8A022FB41A5006A0181 /* TrItunesTests.xctest */,
+				5F03E8AB22FB41A5006A0181 /* TrItunesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F03E88A22FB41A4006A0181 /* TrItunes */ = {
+			isa = PBXGroup;
+			children = (
+				5F03E88B22FB41A4006A0181 /* AppDelegate.h */,
+				5F03E88C22FB41A4006A0181 /* AppDelegate.m */,
+				5F03E88E22FB41A4006A0181 /* ViewController.h */,
+				5F03E88F22FB41A4006A0181 /* ViewController.m */,
+				5F03E89122FB41A4006A0181 /* Main.storyboard */,
+				5F03E89422FB41A5006A0181 /* Assets.xcassets */,
+				5F03E89622FB41A5006A0181 /* LaunchScreen.storyboard */,
+				5F03E89922FB41A5006A0181 /* Info.plist */,
+				5F03E89A22FB41A5006A0181 /* main.m */,
+			);
+			path = TrItunes;
+			sourceTree = "<group>";
+		};
+		5F03E8A322FB41A5006A0181 /* TrItunesTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F03E8A422FB41A5006A0181 /* TrItunesTests.m */,
+				5F03E8A622FB41A5006A0181 /* Info.plist */,
+			);
+			path = TrItunesTests;
+			sourceTree = "<group>";
+		};
+		5F03E8AE22FB41A5006A0181 /* TrItunesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F03E8AF22FB41A5006A0181 /* TrItunesUITests.m */,
+				5F03E8B122FB41A5006A0181 /* Info.plist */,
+			);
+			path = TrItunesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F03E88722FB41A4006A0181 /* TrItunes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F03E8B422FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunes" */;
+			buildPhases = (
+				5F03E88422FB41A4006A0181 /* Sources */,
+				5F03E88522FB41A4006A0181 /* Frameworks */,
+				5F03E88622FB41A4006A0181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrItunes;
+			productName = TrItunes;
+			productReference = 5F03E88822FB41A4006A0181 /* TrItunes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F03E89F22FB41A5006A0181 /* TrItunesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F03E8B722FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunesTests" */;
+			buildPhases = (
+				5F03E89C22FB41A5006A0181 /* Sources */,
+				5F03E89D22FB41A5006A0181 /* Frameworks */,
+				5F03E89E22FB41A5006A0181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F03E8A222FB41A5006A0181 /* PBXTargetDependency */,
+			);
+			name = TrItunesTests;
+			productName = TrItunesTests;
+			productReference = 5F03E8A022FB41A5006A0181 /* TrItunesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F03E8AA22FB41A5006A0181 /* TrItunesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F03E8BA22FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunesUITests" */;
+			buildPhases = (
+				5F03E8A722FB41A5006A0181 /* Sources */,
+				5F03E8A822FB41A5006A0181 /* Frameworks */,
+				5F03E8A922FB41A5006A0181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F03E8AD22FB41A5006A0181 /* PBXTargetDependency */,
+			);
+			name = TrItunesUITests;
+			productName = TrItunesUITests;
+			productReference = 5F03E8AB22FB41A5006A0181 /* TrItunesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F03E88022FB41A4006A0181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Tr1Fecta;
+				TargetAttributes = {
+					5F03E88722FB41A4006A0181 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					5F03E89F22FB41A5006A0181 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 5F03E88722FB41A4006A0181;
+					};
+					5F03E8AA22FB41A5006A0181 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 5F03E88722FB41A4006A0181;
+					};
+				};
+			};
+			buildConfigurationList = 5F03E88322FB41A4006A0181 /* Build configuration list for PBXProject "TrItunes" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F03E87F22FB41A4006A0181;
+			productRefGroup = 5F03E88922FB41A4006A0181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F03E88722FB41A4006A0181 /* TrItunes */,
+				5F03E89F22FB41A5006A0181 /* TrItunesTests */,
+				5F03E8AA22FB41A5006A0181 /* TrItunesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F03E88622FB41A4006A0181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F03E89822FB41A5006A0181 /* LaunchScreen.storyboard in Resources */,
+				5F03E89522FB41A5006A0181 /* Assets.xcassets in Resources */,
+				5F03E89322FB41A4006A0181 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E89E22FB41A5006A0181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E8A922FB41A5006A0181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F03E88422FB41A4006A0181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F03E89022FB41A4006A0181 /* ViewController.m in Sources */,
+				5F03E89B22FB41A5006A0181 /* main.m in Sources */,
+				5F03E88D22FB41A4006A0181 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E89C22FB41A5006A0181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F03E8A522FB41A5006A0181 /* TrItunesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F03E8A722FB41A5006A0181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F03E8B022FB41A5006A0181 /* TrItunesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F03E8A222FB41A5006A0181 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F03E88722FB41A4006A0181 /* TrItunes */;
+			targetProxy = 5F03E8A122FB41A5006A0181 /* PBXContainerItemProxy */;
+		};
+		5F03E8AD22FB41A5006A0181 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F03E88722FB41A4006A0181 /* TrItunes */;
+			targetProxy = 5F03E8AC22FB41A5006A0181 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F03E89122FB41A4006A0181 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F03E89222FB41A4006A0181 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5F03E89622FB41A5006A0181 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F03E89722FB41A5006A0181 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F03E8B222FB41A5006A0181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5F03E8B322FB41A5006A0181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F03E8B522FB41A5006A0181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F03E8B622FB41A5006A0181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F03E8B822FB41A5006A0181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrItunes.app/TrItunes";
+			};
+			name = Debug;
+		};
+		5F03E8B922FB41A5006A0181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrItunes.app/TrItunes";
+			};
+			name = Release;
+		};
+		5F03E8BB22FB41A5006A0181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrItunes;
+			};
+			name = Debug;
+		};
+		5F03E8BC22FB41A5006A0181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H322NL8T4X;
+				INFOPLIST_FILE = TrItunesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Tr1Fecta.TrItunesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrItunes;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F03E88322FB41A4006A0181 /* Build configuration list for PBXProject "TrItunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F03E8B222FB41A5006A0181 /* Debug */,
+				5F03E8B322FB41A5006A0181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F03E8B422FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F03E8B522FB41A5006A0181 /* Debug */,
+				5F03E8B622FB41A5006A0181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F03E8B722FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F03E8B822FB41A5006A0181 /* Debug */,
+				5F03E8B922FB41A5006A0181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F03E8BA22FB41A5006A0181 /* Build configuration list for PBXNativeTarget "TrItunesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F03E8BB22FB41A5006A0181 /* Debug */,
+				5F03E8BC22FB41A5006A0181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F03E88022FB41A4006A0181 /* Project object */;
+}
