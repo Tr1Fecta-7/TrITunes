@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface ViewController : UIViewController
 
 // METHODS
 - (IBAction)changedSegmentAction:(id)sender;
-
-
 
 
 // PROPERTIES
@@ -21,8 +21,5 @@
 typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, tvShows, ebook, music, artists};
 
 @property (nonatomic, assign) CategoryChosen chosenCategory;
-
-
-
 
 @end
