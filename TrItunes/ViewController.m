@@ -45,12 +45,13 @@
     UISegmentedControl* control = (UISegmentedControl*)sender;
     self.chosenCategory = control.selectedSegmentIndex;
     
-    NSString* string = [[NSString alloc] initWithFormat:@"%ld", self.chosenCategory];
     
+    // Test if correct category has been chosen, will be removed later
+    NSString* string = [[NSString alloc] initWithFormat:@"%ld", self.chosenCategory];
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Category Chosen:" message:string preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+        handler:^(UIAlertAction * action) {}];
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
