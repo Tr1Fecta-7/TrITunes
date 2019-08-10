@@ -9,11 +9,6 @@
 #import "ViewController.h"
 
 @interface ViewController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
-    UITableView *table;
-    
-    NSMutableArray* searchResults;
-    
-    NSDictionary* responseDictionary;
 }
 @end
 
@@ -26,24 +21,24 @@
     self.searchBar.delegate = self;
     self.requestDone = NO;
     
-    searchResults = [NSMutableArray new];
+    self.searchResults = [NSMutableArray new];
     
-    table = [[UITableView alloc] initWithFrame:CGRectMake(0, 137, 414, 759)];
-    table.delegate = self;
-    table.dataSource = self;
-    [self.view addSubview:table];
+    self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 137, 414, 759)];
+    self.table.delegate = self;
+    self.table.dataSource = self;
+    [self.view addSubview:self.table];
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.requestDone)
-        return searchResults.count;
+        return self.searchResults.count;
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString* cellIdentifier = @"cellid";
-    UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:cellIdentifier];
+    UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
@@ -91,7 +86,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self getRequest];
     NSLog(@"URL is: %@", self.requestUrl);
-    NSLog(@"Dict value is: %@", responseDictionary);
+    NSLog(@"Dict value is: %@", self.responseDictionary);
 }
 
 - (IBAction)changedSegmentAction:(id)sender {
@@ -124,12 +119,11 @@
         NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse *)response;
         if (httpResponse.statusCode == 200) {
             NSError* parseError = nil;
-            self->responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            self.responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
         }
         else {
             NSLog(@"error");
         }
-        
     }];
     [dataTask resume];
 }

@@ -26,7 +26,9 @@ typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, tvShows, ebook, music, a
 @property (nonatomic, assign) CategoryChosen chosenCategory;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSString* requestUrl;
-
+@property UITableView* table;
+@property NSMutableArray* searchResults;
+@property NSDictionary* responseDictionary;
 @property BOOL requestDone;
 
 @end
