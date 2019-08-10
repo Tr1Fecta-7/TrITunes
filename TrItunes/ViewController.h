@@ -15,8 +15,9 @@
 // METHODS
 - (IBAction)changedSegmentAction:(id)sender;
 
-- (void)getRequest:(NSString *)url;
+- (void)getRequest;
 
+- (void)parseJson;
 
 // PROPERTIES
 
@@ -24,6 +25,7 @@ typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, tvShows, ebook, music, a
 
 @property (nonatomic, assign) CategoryChosen chosenCategory;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+@property NSString* requestUrl;
 
 @property BOOL requestDone;
 

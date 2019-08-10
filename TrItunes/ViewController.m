@@ -32,6 +32,7 @@
     table.delegate = self;
     table.dataSource = self;
     [self.view addSubview:table];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -63,31 +64,34 @@
         
     }
     else {
-        NSString* requestUrl;
         searchText = [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"]; // Changes spaces with + for requests
         
         switch (self.chosenCategory) {
             case movies:
-                requestUrl = [[NSString alloc] initWithFormat:@""];
+                self.requestUrl = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/search?term=%@&entity=movie", searchText];
                 break;
             case tvShows:
-                requestUrl = [[NSString alloc] initWithFormat:@""];
+                self.requestUrl = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/search?term=%@&entity=titleTerm", searchText];
                 break;
             case ebook:
-                requestUrl = [[NSString alloc] initWithFormat:@""];
+                self.requestUrl = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/search?term=%@&entity=titleTerm", searchText];
                 break;
             case music:
-                requestUrl = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/search?term=%@&entity=musicTrack", searchText];
+                self.requestUrl = [[NSString alloc] initWithFormat:@"https://itunes.apple.com/search?term=%@&entity=musicTrack", searchText];
                 break;
             case artists:
-                requestUrl = [[NSString alloc] initWithFormat:@""];
+                self.requestUrl = [[NSString alloc] initWithFormat:@""];
                 break;
         }
         
-        [self getRequest:requestUrl];
     }
-    
-    
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self getRequest];
+    NSLog(@"URL is: %@", self.requestUrl);
+    NSLog(@"Dict value is: %@", responseDictionary);
 }
 
 - (IBAction)changedSegmentAction:(id)sender {
@@ -109,9 +113,9 @@
 
 
 
--(void)getRequest:(NSString *)url {
+-(void)getRequest {
     
-    NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    NSMutableURLRequest* urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:_requestUrl]];
     [urlRequest setHTTPMethod:@"GET"];
     
     NSURLSession* session = [NSURLSession sharedSession];
@@ -131,7 +135,20 @@
 }
 
 
-
+- (void)parseJson {
+    switch (self.chosenCategory) {
+        case movies:
+            break;
+        case tvShows:
+            break;
+        case ebook:
+            break;
+        case music:
+            break;
+        case artists:
+            break;
+    }
+}
 
 
 
