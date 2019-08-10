@@ -15,11 +15,16 @@
 // METHODS
 - (IBAction)changedSegmentAction:(id)sender;
 
+- (void)getRequest:(NSString *)url;
+
 
 // PROPERTIES
 
 typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, tvShows, ebook, music, artists};
 
 @property (nonatomic, assign) CategoryChosen chosenCategory;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
+
+@property BOOL requestDone;
 
 @end
