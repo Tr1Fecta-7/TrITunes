@@ -21,13 +21,14 @@
 
 // PROPERTIES
 
-typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, tvShows, ebook, music, artists};
+typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, ebook, music, artists};
 
 @property (nonatomic, assign) CategoryChosen chosenCategory;
 @property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSString* requestUrl;
 @property UITableView* table;
 @property NSMutableArray* searchResults;
+@property NSMutableArray* subtitleArray;
 @property NSDictionary* responseDictionary;
 @property BOOL requestDone;
 
