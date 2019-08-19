@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+
 
 @interface ViewController () <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
 }
@@ -19,11 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.searchBar.delegate = self;
-    self.requestDone = NO;
     
     
     self.searchResults = [NSMutableArray new];
     self.subtitleArray = [NSMutableArray new];
+    self.imageArray = [NSMutableArray new];
     
     self.table = [[UITableView alloc] initWithFrame:CGRectMake(0, 137, 414, 759)];
     self.table.delegate = self;
@@ -37,28 +39,32 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     NSString* cellIdentifier = @"cellid";
     UITableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell =  [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
     cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [self.subtitleArray objectAtIndex:indexPath.row];
+    
+    if (!(self.chosenCategory == 3)) {
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[self.imageArray objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    }
+    else {
+        cell.imageView.image = nil;
+    }
     
     
     return cell;
 }
 
 
-
-
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
     if (searchText.length == 0) {
-        
-        self.requestDone = NO;
-        
+
         [self.searchBar endEditing:YES];
         
     }
@@ -85,6 +91,10 @@
 
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.searchResults removeAllObjects];
+    [self.subtitleArray removeAllObjects];
+    [self.imageArray removeAllObjects];
+    
     [self getRequest];
     
     
@@ -121,10 +131,7 @@
         if (httpResponse.statusCode == 200) {
             NSError* parseError = nil;
             self.responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-            self.requestDone = YES;
             
-            //NSLog(@"URL is: %@", self.requestUrl);
-            //NSLog(@"%@", self.responseDictionary[@"results"]);
             [self parseJson];
             [self.table performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
         }
@@ -140,19 +147,22 @@
 - (void)parseJson {
     for (id result in self.responseDictionary[@"results"]) {
         switch (self.chosenCategory) {
-            case movies:
+            case artists:
+                [self.searchResults addObject:result[@"artistName"]];
+                if (result[@"primaryGenreName"] != nil) {
+                    [self.subtitleArray addObject:result[@"primaryGenreName"]];
+                }
+                else {
+                    [self.subtitleArray addObject:result[@"artistType"]];
+                }
                 break;
-            case ebook:
-                break;
-            case music:
+            default:
                 [self.searchResults addObject:result[@"trackName"]];
                 [self.subtitleArray addObject:result[@"artistName"]];
-                break;
-            case artists:
-                break;
+                [self.imageArray addObject:result[@"artworkUrl100"]];
+                
         }
     }
-    
 }
 
 

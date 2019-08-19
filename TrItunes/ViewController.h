@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, ebook, music, artists};
 @property UITableView* table;
 @property NSMutableArray* searchResults;
 @property NSMutableArray* subtitleArray;
+@property NSMutableArray* imageArray;
 @property NSDictionary* responseDictionary;
-@property BOOL requestDone;
 
 @end

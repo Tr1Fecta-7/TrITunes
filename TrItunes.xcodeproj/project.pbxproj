@@ -15,6 +15,8 @@
 		5F03E89B22FB41A5006A0181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E89A22FB41A5006A0181 /* main.m */; };
 		5F03E8A522FB41A5006A0181 /* TrItunesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E8A422FB41A5006A0181 /* TrItunesTests.m */; };
 		5F03E8B022FB41A5006A0181 /* TrItunesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F03E8AF22FB41A5006A0181 /* TrItunesUITests.m */; };
+		5F4DFAC3230B039400E08944 /* SDWebImageMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4DFAC1230B039400E08944 /* SDWebImageMapKit.framework */; };
+		5F4DFAC4230B039400E08944 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F4DFAC2230B039400E08944 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5F03E8AB22FB41A5006A0181 /* TrItunesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrItunesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F03E8AF22FB41A5006A0181 /* TrItunesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrItunesUITests.m; sourceTree = "<group>"; };
 		5F03E8B122FB41A5006A0181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F4DFAC1230B039400E08944 /* SDWebImageMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImageMapKit.framework; path = Carthage/Build/iOS/SDWebImageMapKit.framework; sourceTree = "<group>"; };
+		5F4DFAC2230B039400E08944 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F4DFAC3230B039400E08944 /* SDWebImageMapKit.framework in Frameworks */,
+				5F4DFAC4230B039400E08944 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				5F03E8A322FB41A5006A0181 /* TrItunesTests */,
 				5F03E8AE22FB41A5006A0181 /* TrItunesUITests */,
 				5F03E88922FB41A4006A0181 /* Products */,
+				5F4DFAC0230B039400E08944 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,15 @@
 			path = TrItunesUITests;
 			sourceTree = "<group>";
 		};
+		5F4DFAC0230B039400E08944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F4DFAC2230B039400E08944 /* SDWebImage.framework */,
+				5F4DFAC1230B039400E08944 /* SDWebImageMapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +158,7 @@
 				5F03E88422FB41A4006A0181 /* Sources */,
 				5F03E88522FB41A4006A0181 /* Frameworks */,
 				5F03E88622FB41A4006A0181 /* Resources */,
+				5F4DFAC5230B03A800E08944 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +273,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F4DFAC5230B03A800E08944 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImageMapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F03E88422FB41A4006A0181 /* Sources */ = {
@@ -437,6 +476,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49Z9MR24WT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrItunes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +498,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49Z9MR24WT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrItunes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
