@@ -19,6 +19,7 @@
 
 - (void)parseJson;
 
+
 // PROPERTIES
 
 typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, ebook, music, artists};
@@ -31,5 +32,6 @@ typedef NS_ENUM(NSInteger, CategoryChosen) {movies = 0, ebook, music, artists};
 @property NSMutableArray* subtitleArray;
 @property NSMutableArray* imageArray;
 @property NSDictionary* responseDictionary;
+@property UIActivityIndicatorView* indicatorView;
 
 @end

@@ -31,7 +31,7 @@
     self.table.delegate = self;
     self.table.dataSource = self;
     [self.view addSubview:self.table];
-    
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,10 +56,8 @@
         cell.imageView.image = nil;
     }
     
-    
     return cell;
 }
-
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
@@ -88,16 +86,15 @@
         
     }
 }
-
+// Remove Category Chosen and loading screen for when searching
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.searchResults removeAllObjects];
     [self.subtitleArray removeAllObjects];
     [self.imageArray removeAllObjects];
+    [searchBar resignFirstResponder];
     
     [self getRequest];
-    
-    
 }
 
 - (IBAction)changedSegmentAction:(id)sender {
@@ -114,6 +111,8 @@
     
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
+    
+    
 }
 
 
